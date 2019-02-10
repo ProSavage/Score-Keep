@@ -2,7 +2,6 @@ import React from "react";
 import {Players} from "../api/players";
 
 
-
 export default class AddPlayer extends React.Component {
     handleSubmit(event) {
         let playerName = event.target.playerName.value;
@@ -12,13 +11,13 @@ export default class AddPlayer extends React.Component {
             event.target.playerName.value = '';
             Players.insert({
                 name: playerName,
-                score: 10
+                score: 0
             });
         }
     }
     render() {
         return (
-            <div>
+            <div className="item">
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" name="playerName" placeholder="Player name"/>
                     <button>Add Player</button>
