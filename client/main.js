@@ -18,7 +18,7 @@ Meteor.startup(() => {
         let jsx = (
 
             <div>
-                <TitleBar title={title} subtitle='Created by Naman Gupta'/>
+                <TitleBar title={title}/>
                 <PlayerList players={players}/>
                 <AddPlayer/>
             </div>
